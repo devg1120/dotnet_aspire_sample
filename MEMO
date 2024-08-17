@@ -1,0 +1,20 @@
+# dotnet workload install aspire
+
+*windows
+dotnet dev-certs https --trust
+
+*linux
+# dotnet tool update -g linux-dev-certs
+# dotnet linux-dev-certs install
+
+
+# dotnet new aspire-starter -o aspire-starter-first
+
+** ENDPOINT
+dashboard  https://localhost:17188
+web        https://localhost:7030 
+           http://localhost:5284
+api        http://localhost:5522/weatherforecast
+
+
+
