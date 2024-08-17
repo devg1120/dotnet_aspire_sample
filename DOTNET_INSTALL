@@ -9,4 +9,5 @@ https://dot.net/v1/dotnet-install.sh
 # vim .bashrc
 export DOTNET_ROOT=$HOME/.dotnet
 export PATH=$PATH:$HOME/.dotnet
+export PATH=$PATH:$HOME/.dotnet/tools
 
