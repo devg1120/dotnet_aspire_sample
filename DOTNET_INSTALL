@@ -1,4 +1,6 @@
 
+https://learn.microsoft.com/ja-jp/dotnet/core/tools/dotnet-install-script
+https://dot.net/v1/dotnet-install.sh
 
 # wget https://dot.net/v1/dotnet-install.sh
 # chmod 755 dotnet-install.sh
