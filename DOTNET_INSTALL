@@ -1,0 +1,10 @@
+
+
+# wget https://dot.net/v1/dotnet-install.sh
+# chmod 755 dotnet-install.sh
+# ./dotnet-install.sh  --version latest
+
+# vim .bashrc
+export DOTNET_ROOT=$HOME/.dotnet
+export PATH=$PATH:$HOME/.dotnet
+
