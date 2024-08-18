@@ -1,5 +1,6 @@
 .NET Aspire is the best way to experiment with Dapr during local development
 https://anthonysimmon.com/dotnet-aspire-best-way-to-experiment-dapr-local-dev/
+https://github.com/asimmon/aspire-dapr-demo
 
 .NET 8.0
  # dotnet --version
@@ -16,5 +17,19 @@ Docker Desktop
  # systemctl status docker
 
 Dapr
- # wget -q https://raw.githubusercontent.com/dapr/cli/master/install/install.sh -O - | /bin/bash
+https://docs.dapr.io/getting-started/install-dapr-selfhost/
+
+ # wget -q https://raw.githubusercontent.com/dapr/cli/master/install/install.sh -O - | DAPR_INSTALL_DIR="$HOME/.dapr/bin" /bin/bash
+
+ ~/.bashrc
+ export PATH=$PATH:$HOME/.dapr/bin
+ cd ~/.dapr/bin
+ dapr init
+ ls -l
+ -rwxr-xr-x 1 devg1120 devg1120  82961824  8月 18 13:30 dapr*
+ -rwxrwxrwx 1 devg1120 devg1120 183828632  8月 18 13:39 daprd*
+ -rwxrwxrwx 1 devg1120 devg1120  44589056  8月 18 13:38 dashboard*
+ drwxr-xr-x 3 devg1120 devg1120      4096  8月 18 13:38 web/
+
+
 

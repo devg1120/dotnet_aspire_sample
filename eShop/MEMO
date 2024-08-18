@@ -1,2 +1,12 @@
 https://github.com/dotnet/eShop
 
+cd src/eShop.AppHost
+dotnet run
+
+https://localhost:7298/
+
+
+
+
+
+

@@ -1,0 +1,1 @@
+# A sample app to understand and learn the integration between Aspire & dapr.

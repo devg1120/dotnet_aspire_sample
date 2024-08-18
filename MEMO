@@ -1,13 +1,15 @@
 # dotnet workload install aspire
 
 *windows
-dotnet dev-certs https --trust
+# dotnet dev-certs https --clean
+# dotnet dev-certs https --trust
 
 *linux
 
 dotnet dev-certs - 自己署名証明書が生成され、開発中に HTTPS を使用できるようになります。
 https://learn.microsoft.com/ja-jp/dotnet/core/tools/dotnet-dev-certs
 
+# dotnet dev-certs https --clean
 # dotnet tool update -g linux-dev-certs
 # dotnet linux-dev-certs install
 
