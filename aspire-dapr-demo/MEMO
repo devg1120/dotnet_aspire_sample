@@ -1,0 +1,20 @@
+.NET Aspire is the best way to experiment with Dapr during local development
+https://anthonysimmon.com/dotnet-aspire-best-way-to-experiment-dapr-local-dev/
+
+.NET 8.0
+ # dotnet --version
+ 8.0.401
+
+.NET Aspire workload
+ # dotnet workload install aspire
+
+Node.js 20.10+
+ # nvm use 20.11
+
+Docker Desktop
+ # systemctl start docker
+ # systemctl status docker
+
+Dapr
+ # wget -q https://raw.githubusercontent.com/dapr/cli/master/install/install.sh -O - | /bin/bash
+
