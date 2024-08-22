@@ -1,0 +1,25 @@
+{
+  "urls": "http://*:5055;https://*:7055",
+  "AllowedHosts": "*",
+    "Kestrel": {
+    "Endpoints": {
+      "Http": {
+        "Url": "http://*:5055"
+      },
+      "Https": {
+        "Url": "https://*:7055",
+        "ClientCertificateMode": "AllowCertificate",
+        "Certificate": {
+          "Path": "/root/.local/share/mkcert/ubuntu-server-01.pfx",
+          "Password": ""
+        }
+      }
+    }
+  },
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  }
+}

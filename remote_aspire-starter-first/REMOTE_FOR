@@ -1,0 +1,95 @@
+----------------
+Building...
+warn: Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer[8]
+      The ASP.NET Core developer certificate is not trusted. For information about trustingps://aka.ms/aspnet/https-trust-dev-cert.
+info: Aspire.Hosting.DistributedApplication[0]
+      Aspire version: 8.1.0+d304c5f6f15bcd4f34f1841b33870cfab88e6937
+info: Aspire.Hosting.DistributedApplication[0]
+      Distributed application starting.
+info: Aspire.Hosting.DistributedApplication[0]
+      Application host directory is: /root/dotnet_aspire_sample/remote_aspire-starter-first
+info: Aspire.Hosting.DistributedApplication[0]
+      Now listening on: https://localhost:17188
+info: Aspire.Hosting.DistributedApplication[0]
+      Login to the dashboard at https://localhost:17188/login?t=76902d098831622a41533953929
+info: Aspire.Hosting.DistributedApplication[0]
+      Distributed application started. Press Ctrl+C to shut down.
+
+
+
+Properties/launchSettings.json
+   "applicationUrl": "https://localhost:17188;http://localhost:15200",
+   "applicationUrl": "https://10.0.2.15:7055;http://10.0.2.15:5055",
+
+
+# vi ./appsettings.Development.json
+
+  "urls": "http://*:5055;https://*:7055",
+  "AllowedHosts": "*",
+
+# vi ./appsettings.json
+
+  "urls": "http://*:5055;https://*:7055",
+  "AllowedHosts": "*",
+
+
+--------------------------------
+
+dotnet dev-certs https --clean
+dotnet dev-certs https --trust
+
+dotnet dev-certs https --format pem -ep  localhost.pem -p ntt
+dotnet dev-certs https -ep ./certificate.crt --trust --format PEM
+dotnet dev-certs https -ep ./certificate.pfx  -p ntt --trust
+--------------------------------
+
+cert  install
+https://qiita.com/iruka/items/76ce765057b457b29c64
+
+https://learn.microsoft.com/ja-jp/aspnet/core/fundamentals/servers/kestrel/endpoints?view=aspnetcore-8.0&source=recommendations
+
+
+
+dotnet tool update -g linux-dev-certs
+dotnet linux-dev-certs install
+
+dotnet dev-certs https
+sudo -E dotnet dev-certs https -ep /usr/local/share/ca-certificates/aspnet/https.crt --format PEM
+sudo update-ca-certificates
+
+
+
+
+-------------------------------
+# apt install libnss3-tools
+
+# apt install mkcert
+
+
+# mkcert -install
+
+
+# tree ~/.local/share/mkcert/
+/root/.local/share/mkcert/
+|-- rootCA-key.pem
+`-- rootCA.pem
+
+------------------
+windows
+
+
+ scp root@127.0.0.1:~/.local/share/mkcert/rootCA.pem  .
+ mv rootCA.pem  rootCA.pem.crt
+
+ rootCA.pem.crt <db click>
+
+
+------------------
+# mkcert ubuntu-server-01
+
+-rw------- 1 root root 1704  8月 20 12:52 ubuntu-server-01-key.pem
+-rw-r--r-- 1 root root 1489  8月 20 12:52 ubuntu-server-01.pem
+
+
+openssl pkcs12 -export -inkey  ubuntu-server-01-key.pem -in  ubuntu-server-01.pem -out  ubuntu-server-01.pfx
+

@@ -1,0 +1,4 @@
+
+{
+    "server.urls": "http://*:5031;https://*:5030"
+}
